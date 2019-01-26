@@ -1,5 +1,6 @@
 " ========== Vim Basic Settings ============="
 " Pathogen settings.
+set runtimepath+=expand('~/.vim/vim-mql4')
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
@@ -261,5 +262,13 @@ let g:ycm_filepath_blacklist = {
       \}
 
 let g:jedi#force_py_version = 3
+
+"Ag to search all project"
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Increase peform
+set timeoutlen=1000
+set ttimeoutlen=0
+
 " =========== END Plugin Settings =========="
 "
